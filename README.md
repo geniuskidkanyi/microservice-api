@@ -3,22 +3,25 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
 
-* Ruby version
 
-* System dependencies
+* to login 
 
-* Configuration
+```
+POST http://localhost:3000/login
 
-* Database creation
+{
+"user": {
+        "email": "user@example.com",
+        "password": "123456"
+    }
+}
+```
 
-* Database initialization
+* to make a transaction
+```
+POST localhost:3000/transactions
 
-* How to run the test suite
+{"transaction": {"customer_id": "PC035079", "input_amount": 59.50, "input_currency": "$", "output_amount": 2500.59, "output_currency": "GMD" }}
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
